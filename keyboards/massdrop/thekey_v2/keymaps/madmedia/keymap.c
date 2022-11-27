@@ -15,9 +15,37 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "raw_hid.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT(KC_MEDIA_PLAY_PAUSE, KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK),
 
 };
+
+void raw_hid_receive(uint8_t *data, uint8_t length) {
+  switch(data[0])
+  {
+    case 1:
+      rgblight_sethsv_noeeprom(HSV_ORANGE);
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+      break;
+    case 2:
+      rgblight_sethsv_noeeprom(HSV_GREEN);
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+      break;
+    case 3:
+      rgblight_sethsv_noeeprom(HSV_ORANGE);
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING);
+      break;
+    case 4:
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_CHRISTMAS);
+      break;
+    case 5:
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_SNAKE);
+      break;
+
+    default:
+      rgblight_sethsv_noeeprom(HSV_RED);
+  }
+}

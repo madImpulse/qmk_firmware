@@ -22,6 +22,9 @@
 #define MATRIX_ROWS 1
 #define MATRIX_COLS 3
 
+#define RAW_USAGE_PAGE 0xFF60
+#define RAW_USAGE_ID 0x61
+
 /*
  * Keyboard Matrix Assignments
  */
