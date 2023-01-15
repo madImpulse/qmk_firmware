@@ -18,6 +18,8 @@
 #include "madkeys.h"
 #include "muse.h"
 
+#define LAYOUT_preonic_grid_wrapper(...) LAYOUT_preonic_grid(__VA_ARGS__)
+
 enum preonic_layers {
   _QWERTY,
   _LOWER,
