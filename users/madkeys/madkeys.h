@@ -50,7 +50,7 @@
 
 #define MADROW67890RAI  KC_6,    KC_7,    KC_8,    KC_9,    KC_0
 #define MADROWYUIOPRAI  KC_6,    KC_7,    KC_8,    KC_9,    KC_0
-#define MADROWHJKLRAI   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC
+#define MADROWHJKLRAI   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC
 #define MADROWNMRAI     KC_F12,  KC_NUHS
 
 #define MADROWSEMICOLRAI  KC_RBRC
