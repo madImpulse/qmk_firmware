@@ -8,7 +8,7 @@ enum mad_layers {
   _MADSETTINGS
 };
 
-#base alpha keys and right side special chars
+/* base alpha keys and right side special chars */
 
 #define MADROW12345  KC_1, KC_2, KC_3, KC_4, KC_5
 #define MADROWQWERT  KC_Q, KC_W, KC_E, KC_R, KC_T
