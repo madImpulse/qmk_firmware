@@ -1,13 +1,6 @@
 #pragma once
 #include QMK_KEYBOARD_H
 
-enum mad_layers {
-  _MADBASE,
-  _MADLOWER,
-  _MADRAISE,
-  _MADSETTINGS
-};
-
 /* base alpha keys and right side special chars */
 
 #define MADROW12345  KC_1, KC_2, KC_3, KC_4, KC_5
@@ -28,3 +21,4 @@ enum mad_layers {
 /* wrappers */
 
 #define LAYOUT_wrapper(...)  LAYOUT(__VA_ARGS__)
+#define LAYOUT_preonic_grid_wrapper(...) LAYOUT_preonic_grid(__VA_ARGS__)
