@@ -22,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_MADLOWER] = LAYOUT_wrapper(
         KC_TILD,  MADROWNUMLOW,    _______, _______,  _______,  _______,
         KC_TILD,  MADROWQLOW,               _______, _______, _______,
-        KC_DEL ,  MADROWALOW,               KC_PIPE,          _______,
+        KC_DEL ,  MADROWALOW,               KC_PIPE,          _______,<
         _______,    MADROWZLOW,      KC_END, _______, _______,   _______,
         _______, _______, _______,                   _______,  _______,  MO(_MADSET),           _______, _______, _______, _______, _______
     ),
@@ -36,9 +36,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_MADSET] = LAYOUT_wrapper(
-        KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, KC_DEL,
-        _______, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, _______, _______, _______, QK_BOOT,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
+        _______, RGB_MODE_PLAIN, RGB_MODE_BREATHE, RGB_MODE_RAINBOW, RGB_MODE_SWIRL, RGB_MODE_SNAKE, RGB_MODE_KNIGHT, RGB_MODE_XMAS, RGB_MODE_GRADIENT, RGB_MODE_RGBTEST, _______, _______, _______, _______, _______,
+        _______, RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, _______, _______, _______, _______, _______, _______, QK_BOOT,
+        _______, _______, RGB_RNOD, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______, _______, BL_DOWN, BL_TOGG, BL_UP,   BL_STEP, _______, _______, _______, _______, _______, _______,
         _______, _______, _______,                   _______, _______, _______,          _______, _______, _______, _______, _______
     )
