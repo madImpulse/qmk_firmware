@@ -23,3 +23,8 @@ enum mad_layers {
 #define MADROWSEMICOL KC_SCLN
 #define MADROWCOMDOT  KC_COMM,  KC_DOT
 #define MADROWSLASH   KC_SLSH
+
+
+/* wrappers */
+
+#define LAYOUT_wrapper(...)  LAYOUT(__VA_ARGS__)
