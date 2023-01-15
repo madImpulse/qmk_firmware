@@ -3,10 +3,10 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LAYOUT_wrapper(
-        KC_GRV,  MADROW12345,    MADROW67890,    KC_MINS, KC_EQL,  KC_DEL,  KC_BSPC,
-        KC_TAB,  MADROWQWERT,    MADROWYUIOP,    KC_LBRC, KC_RBRC, KC_BSLS,
-        KC_ESC,  MADROWASDFG,    MADROWHJKL,     MADROWSEMICOL, KC_QUOT,          KC_ENT,
-        KC_LSFT, MADROWZXCVB,    MADROWNM,       MADROWCOMDOT,  MADROWSLASH, KC_RSFT, KC_UP,   KC_RSFT,
+        KC_GRV,  MADROWNUM,   KC_MINS, KC_EQL,  KC_DEL,  KC_BSPC,
+        KC_TAB,  MADROWQ,              KC_LBRC, KC_RBRC, KC_BSLS,
+        KC_ESC,  MADROWA,               KC_QUOT,          KC_ENT,
+        KC_LSFT, MADROWZ,      KC_SLSH, KC_RSFT, KC_UP,   KC_RSFT,
         KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,  KC_SPC,  KC_SPC,           KC_RALT, KC_LCTL, KC_LEFT, KC_DOWN, KC_RIGHT
     ),
 
