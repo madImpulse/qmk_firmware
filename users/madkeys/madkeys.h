@@ -18,7 +18,7 @@ enum mad_layers {
 #define MADROW67890  KC_6, KC_7, KC_8, KC_9, KC_0
 #define MADROWYUIOP  KC_Y, KC_U, KC_I, KC_O, KC_P
 #define MADROWHJKL   KC_H, KC_J, KC_K, KC_L
-#define MADROWNM     KC_N,   KC_M
+#define MADROWNM     KC_N, KC_M
 
 #define MADROWSEMICOL KC_SCLN
 #define MADROWCOMDOT  KC_COMM,  KC_DOT
