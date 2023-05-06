@@ -24,7 +24,8 @@ enum layers{
     STANDARD_FN,
     MAD_BASE,
     MAD_LOWER,
-    MAD_RAISE
+    MAD_RAISE,
+    MAD_FN
 };
 
 #define KC_TASK LGUI(KC_TAB)
@@ -37,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,  KC_BSLS,            KC_HOME,
         KC_ESC,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,            KC_ENT,             KC_END,
         KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,            KC_RSFT,  KC_UP,
-        KC_LCTL,  KC_LWIN,  KC_LALT,                                KC_SPC,                                 KC_RALT, MO(STANDARD_FN), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LWIN,  KC_LALT,                                KC_SPC,                                 KC_RALT, MO(MAD_FN), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [STANDARD_FN] = LAYOUT_ansi_82(
         _______,            KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,  KC_SYSTEM_POWER,
@@ -61,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,   MADROWQLOW,                                                                                       _______,  _______,  _______,            _______,
         _______,   MADROWALOW,                                                                                       KC_PIPE,            _______,            _______,
         _______,   MADROWZLOW,                                                                                       KC_END,             _______,  _______,
-        _______,   _______,  _______,                                _______,                              _______,  MO(STANDARD_FN),  _______,  _______,  _______,  _______),
+        _______,   _______,  _______,                                _______,                              _______,  _______,  _______,  _______,  _______,  _______),
 
     [MAD_RAISE] = LAYOUT_wrapper(
         _______,           _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  QK_BOOTLOADER,  KC_SYSTEM_POWER,
@@ -69,5 +70,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,   MADROWQRAI,                                                                                       _______,  _______,  _______,            _______,
         _______,   MADROWARAI,                                                                                       KC_BSLS,            _______,            _______,
         _______,   MADROWZRAI,                                                                                       KC_PGDN,            _______,  _______,
-        _______,   _______,  _______,                                _______,                              _______,  MO(STANDARD_FN),  _______,  _______,  _______,  _______),
+        _______,   _______,  _______,                                _______,                        MO(MAD_FN),  MO(MAD_FN),  _______,  _______,  _______,  _______),
+
+    [MAD_FN] = LAYOUT_ansi_82(
+        _______,            KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,  KC_SYSTEM_POWER,
+        _______,  RGB_MODE_PLAIN, RGB_MODE_BREATHE, RGB_MODE_RAINBOW, RGB_MODE_SWIRL, RGB_MODE_SNAKE, RGB_MODE_KNIGHT, RGB_MODE_XMAS, RGB_MODE_GRADIENT,  _______,  _______,  _______,  _______,  _______,           _______,
+        _______,  RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,
+        _______,  _______,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  _______,  _______,  _______,  _______,  _______,            _______,            _______,
+        _______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,  _______,
+        _______,  _______,  _______,                                _______,                                _______,  _______,  _______,  _______,  _______,  _______),
 };
