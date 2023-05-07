@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,   _______,  _______,                                _______,                              _______,  _______,  _______,  _______,  _______,  _______),
 
     [MAD_RAISE] = LAYOUT_wrapper(
-        _______,           _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  QK_BOOTLOADER,  KC_SYSTEM_POWER,
+        _______,           _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_SYSTEM_POWER,
         _______,   MADROWNUMRAI,                                                                                     _______,  _______,  _______,            _______,
         _______,   MADROWQRAI,                                                                                       _______,  _______,  _______,            _______,
         _______,   MADROWARAI,                                                                                       KC_BSLS,            _______,            _______,
@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,   _______,  _______,                                _______,                        MO(MAD_FN),  MO(MAD_FN),  _______,  _______,  _______,  _______),
 
     [MAD_FN] = LAYOUT_ansi_82(
-        _______,            KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,  KC_SYSTEM_POWER,
+        _______,            KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  QK_BOOTLOADER,  KC_SYSTEM_POWER,
         _______,  RGB_MODE_PLAIN, RGB_MODE_BREATHE, RGB_MODE_RAINBOW, RGB_MODE_SWIRL, RGB_MODE_SNAKE, RGB_MODE_KNIGHT, RGB_MODE_XMAS, RGB_MODE_GRADIENT,  _______,  _______,  _______,  _______,  _______,           _______,
         _______,  RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,
         _______,  _______,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  _______,  _______,  _______,  _______,  _______,            _______,            _______,
