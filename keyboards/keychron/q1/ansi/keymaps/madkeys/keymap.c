@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,  KC_BSLS,            KC_HOME,
         KC_ESC,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,            KC_ENT,             KC_END,
         KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,            KC_RSFT,  KC_UP,
-        KC_LCTL,  KC_LWIN,  KC_LALT,                                KC_SPC,                                 KC_RALT, MO(MAD_FN), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LWIN,  KC_LALT,                                KC_SPC,                                 MO(MAD_FN), KC_RALT,  KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [STANDARD_FN] = LAYOUT_ansi_82(
         _______,            KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  _______,  KC_SYSTEM_POWER,
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   MADROWQ,                                                                                            KC_LBRC,  KC_RBRC,  KC_BSLS,            KC_HOME,
         LT(MAD_UML, KC_ESC),   MADROWA,                                                                               KC_QUOT,            KC_ENT,             KC_END,
         KC_LSFT,  MADROWZ,                                                                                            KC_SLSH,            KC_RSFT,  KC_UP,
-        KC_LCTL,  KC_LWIN,  KC_LALT,                            LT(MAD_LOWER, KC_SPC),                 MO(MAD_RAISE), MO(MAD_RAISE), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LWIN,  KC_LALT,                            LT(MAD_LOWER, KC_SPC),                 MO(MAD_RAISE), KC_RALT, KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [MAD_LOWER] = LAYOUT_wrapper(
         _______,           _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
