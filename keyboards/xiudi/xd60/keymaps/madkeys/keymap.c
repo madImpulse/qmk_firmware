@@ -7,7 +7,6 @@ enum madddz64_layers {
   _MADBASE,
   _MADLOWER,
   _MADRAISE,
-  _MADUML,
   _MADSET
 };
 
@@ -15,8 +14,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_MADBASE] = LAYOUT_wrapper(
         KC_GRV,         MADROWNUM,                                                                                                  KC_MINS, KC_EQL,  KC_DEL,  KC_BSPC,
         KC_TAB,         MADROWQ,                                                                                                             KC_LBRC, KC_RBRC, KC_BSLS,
-        LT(_MADUML, KC_ESC),  MADROWA,                                                                                                             KC_QUOT,  KC_NO,          KC_ENT,
-        KC_LSFT, _______, MADROWZ,                                                                                                  _______, RSFT_T(KC_SLSH),  KC_UP,   RSFT_T(KC_SLSH),
+        MADCTL,         MADROWA,                                                                                                             KC_QUOT,  KC_NO,          KC_ENT,
+        KC_LSFT, _______, MADROWZ,                                                                                                  _______, MADRSFT,  KC_UP,   MADRSFT,
         KC_LCTL, KC_LGUI, KC_LALT,                   LT(_MADLOWER, KC_SPC), LT(_MADRAISE, KC_SPC),         KC_SPC, KC_RALT, KC_LCTL, KC_LEFT, KC_DOWN, KC_RIGHT
     ),
 
@@ -34,14 +33,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_DEL ,  MADROWARAI,                                                                                                               KC_BSLS, _______,  _______,
         _______,   _______,  MADROWZRAI,                                                                                                    _______, KC_PGDN, _______, _______,
         _______,  _______, _______,                   MO(_MADSET),  _______,  _______,                                     _______, _______, _______, _______, _______
-    ),
-
-    [_MADUML] = LAYOUT_wrapper(
-        _______,  MADROWNUMUML,                                                                                                   _______, _______,  _______,  _______,
-        _______,  MADROWQUML,                                                                                                              _______,  _______,  _______,
-        _______,  MADROWAUML,                                                                                                               _______, _______,  _______,
-        _______,  _______,   MADROWZUML,                                                                                                     _______, _______, _______, _______,
-        _______,  _______, _______,                   _______,  _______,  _______,                                     _______, _______, _______, _______, _______
     ),
 
     [_MADSET] = LAYOUT_wrapper(
