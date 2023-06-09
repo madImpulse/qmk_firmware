@@ -23,10 +23,8 @@ enum encoder_names {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
-        | Knob 1: Vol Dn/Up |      | Knob 2: Page Dn/Up |
-        | Press: Mute       | Home | Press: Play/Pause  |
-        | Hold: Layer 2     | Up   | RGB Mode           |
-        | Left              | Down | Right              |
+        various F-Keys to be used as shortcuts
+        and normal media keys in lower row
      */
     [0] = LAYOUT(
         RALT(KC_F13), RALT(KC_F15), RALT(KC_F17),
@@ -34,22 +32,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MEDIA_PLAY_PAUSE, KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK
     ),
     /*
-        | QK_BOOT          | N/A  | Media Stop |
-        | Held: Layer 2  | Home | RGB Mode   |
-        | Media Previous | End  | Media Next |
+        rgb control
+        | n/a         | rgb hue dec  | rgb hue inc |
+        | n/a         | rgb toggle   | rgb next    |
+        | rgb sat dec | rgb sat inc  | rgb prev    |
      */
     [1] = LAYOUT(
-        QK_BOOT  ,RGB_HUD, RGB_HUI,
+        KC_NO,   RGB_HUD, RGB_HUI,
         _______, RGB_TOG, RGB_MOD,
         RGB_SAD, RGB_SAI , RGB_RMOD
     ),
         /*
-        | QK_BOOT          | N/A  | Media Stop |
-        | Held: Layer 2  | Home | RGB Mode   |
-        | Media Previous | End  | Media Next |
+        emergency arrow mode
+        | n/a    | n/a   | n/a   |
+        | enter  | up    | n/a   |
+        | left   | down  | right |
      */
     [2] = LAYOUT(
-        QK_BOOT, BL_STEP, KC_STOP,
+        KC_NO, KC_NO, KC_NO,
         KC_ENTER, KC_UP, _______,
         KC_LEFT, KC_DOWN, KC_RIGHT
     )
