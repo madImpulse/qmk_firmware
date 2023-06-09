@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, RGB_TOG, RGB_MOD,
         RGB_SAD, RGB_SAI , RGB_RMOD
     ),
-        /*
+    /*
         emergency arrow mode
         | n/a    | n/a   | n/a   |
         | enter  | up    | n/a   |
