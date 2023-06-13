@@ -21,60 +21,100 @@ enum encoder_names {
   _MIDDLE,
 };
 
+enum madbdn9pad_leyers {
+    _MADMEDIA,
+    _MADRGB,
+    _MADARROWS,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
         various F-Keys to be used as shortcuts
         and normal media keys in lower row
      */
-    [0] = LAYOUT(
+    [_MADMEDIA] = LAYOUT(
         RALT(KC_F13), RALT(KC_F15), RALT(KC_F17),
         MO(1), RCTL(KC_F15), MO(2),
         KC_MEDIA_PLAY_PAUSE, KC_MEDIA_PREV_TRACK, KC_MEDIA_NEXT_TRACK
     ),
     /*
         rgb control
-        | n/a         | rgb hue dec  | rgb hue inc |
-        | n/a         | rgb toggle   | rgb next    |
-        | rgb sat dec | rgb sat inc  | rgb prev    |
+        | val         | hue          | sat         |
+        | n/a         | rgb spd inc  | rgb next    |
+        | rgb toggle  | rgb spd dec  | rgb prev    |
      */
-    [1] = LAYOUT(
-        KC_NO,   RGB_HUD, RGB_HUI,
-        _______, RGB_TOG, RGB_MOD,
-        RGB_SAD, RGB_SAI , RGB_RMOD
+    [_MADRGB] = LAYOUT(
+        _______,   _______, _______,
+        _______, RGB_SPI, RGB_MOD,
+        RGB_TOG, RGB_SPD, RGB_RMOD
     ),
     /*
         emergency arrow mode
-        | n/a    | n/a   | n/a   |
-        | enter  | up    | n/a   |
-        | left   | down  | right |
+        | n/a         | n/a         | bootloader   |
+        | enter       | up          | n/a          |
+        | left        | down        | right        |
      */
-    [2] = LAYOUT(
-        KC_NO, KC_NO, KC_NO,
+    [_MADARROWS] = LAYOUT(
+        _______, _______, QK_BOOTLOADER,
         KC_ENTER, KC_UP, _______,
         KC_LEFT, KC_DOWN, KC_RIGHT
     )
 };
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == _LEFT) {
-        if (clockwise) {
-            tap_code(KC_F13);
-        } else {
-            tap_code(KC_F14);
+    /* somehow clock orientation is mixed up */
+    if (layer_state_is(_MADMEDIA))
+    {
+        if (index == _LEFT)
+        {
+            if (clockwise) {
+                tap_code(KC_F13);
+            } else {
+                tap_code(KC_F14);
+            }
+        }
+        else if (index == _MIDDLE)
+        {
+            if (clockwise) {
+                tap_code(KC_F15);
+            } else {
+                tap_code(KC_F16);
+            }
+        }
+        else if (index == _RIGHT)
+        {
+            if (clockwise) {
+                tap_code(KC_F17);
+            } else {
+                tap_code(KC_F18);
+            }
         }
     }
-    else if (index == _MIDDLE) {
-        if (clockwise) {
-            tap_code(KC_F15);
-        } else {
-            tap_code(KC_F16);
+    else
+    {
+        if (index == _LEFT)
+        {
+            if (!clockwise) {
+                rgblight_increase_val_noeeprom();
+            } else {
+                rgblight_decrease_val_noeeprom();
+            }
         }
-    }
-    else if (index == _RIGHT) {
-        if (clockwise) {
-            tap_code(KC_F17);
-        } else {
-            tap_code(KC_F18);
+        else if (index == _MIDDLE)
+        {
+            if (!clockwise) {
+                rgblight_increase_hue_noeeprom();
+            } else {
+                rgblight_decrease_hue_noeeprom();
+            }
+        }
+        else if (index == _RIGHT)
+        {
+            if (!clockwise) {
+                rgblight_increase_sat_noeeprom();
+            } else {
+                rgblight_decrease_sat_noeeprom();
+            }
         }
     }
     return false;
