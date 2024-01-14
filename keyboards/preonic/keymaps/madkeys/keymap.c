@@ -34,6 +34,8 @@ enum preonic_keycodes {
   BACKLIT
 };
 
+#define MADNAVLAYER _LOWER
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
@@ -52,9 +54,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = LAYOUT_preonic_grid_wrapper(
   KC_GRV,  MADROWNUM,             KC_BSPC,
   KC_TAB,  MADROWQ,               KC_DEL,
-  KC_ESC,  MADROWA,               KC_ENT,
-  KC_LSFT, MADROWZ,      KC_UP,   KC_QUOT,
-  KC_LCTL, KC_LGUI, KC_LALT, KC_RALT, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_SLSH, KC_LEFT, KC_DOWN, KC_RGHT
+  LCTL_T(KC_ESC),  MADROWA,
+  KC_LSFT, MADROWZ,               KC_RSFT,
+  KC_LCTL, KC_LGUI, KC_LALT, LALT_T(KC_ENTER), LOWER,   KC_SPC,  KC_SPC,  RAISE,  RALT_T(KC_ENTER), KC_RCTL, KC_LEFT, KC_RGHT
 ),
 
 
@@ -73,9 +75,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT_preonic_grid_wrapper(
   KC_TILD, MADROWNUMLOW,         KC_BSPC,
-  KC_TILD, MADROWQLOW,           KC_DEL,
-  KC_DEL,  MADROWALOW,           KC_PIPE,
-  _______, MADROWZLOW,   KC_END, _______,
+  KC_TILD, MADROWQLOW,           KC_DEL,!
+  KC_DEL,  MADROWALOW,
+  _______, MADROWZLOW,           KC_PSCR,
   _______, _______, _______, BACKLIT, _______, _______, _______, _______, _______, _______, _______, _______
 ),
 
@@ -93,10 +95,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT_preonic_grid_wrapper(
-  KC_GRV,  MADROWNUMRAI,        KC_SYSTEM_POWER,
-  KC_GRV,  MADROWQRAI,          KC_DEL,
-  KC_DEL,  MADROWARAI,          KC_BSLS,
-  _______, MADROWZRAI, KC_PGDN, _______,
+  _______,    MADROWNUMRAI,        _______,
+  MADTABRAI,  MADROWQRAI,          _______,
+  MADCAPSRAI, MADROWARAI,
+  MADLSFTRAI, MADROWZRAI,          _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 ),
 
