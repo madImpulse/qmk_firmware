@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    MADROWNUMRAI,                                                                                                   _______, _______,  _______,  KC_SYSTEM_POWER,
         MADTABRAI,  MADROWQRAI,                                                                                                              _______,  _______,  _______,
         MADCAPSRAI, MADROWARAI,                                                                                                                                  _______,
-        MADLSFTRAI, MADROWZRAI,                                                                                                              _______, _______, _______,
+        MADLSFTRAI, MADROWZRAI,                                                                                                           MADRSFTRAI, _______, _______,
         _______,  _______, _______,                   MO(_MADSET),  _______,  _______,                                     _______, _______, _______, _______, _______
     ),
 

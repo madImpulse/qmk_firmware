@@ -1,7 +1,19 @@
 #pragma once
 #include QMK_KEYBOARD_H
 
-/* base alpha keys and right side special chars */
+/* base keys */
+
+/* Qwerty, see "full rows"
+ * --------------------------------------  -------------------------------------
+ *   |   1  |   2  |   3  |   4  |   5  |  |   6  |   7  |   8  |   9  |   0  |
+ * --+------+------+------+------+------+  +------+------+------+------+------+-
+ *   |   Q  |   W  |   E  |   R  |   T  |  |   Y  |   U  |   I  |   O  |   P  |
+ * --+------+------+------+------+-------  -------+------+------+------+------+------|-
+ *   |   A  |   S  |   D  |   F  |   G  |  |   H  |   J  |   K  |   L  |   ;  |  '   |
+ * --+------+------+------+------+------|  |------+------+------+------+------+------|-
+ *   |   Z  |   X  |   C  |   V  |   B  |  |   N  |   M  |   ,  |   .  |   /  |
+ * --+------+------+------+------+------+  +------+------+------+------+------+--
+ */
 
 #define MADROW12345  KC_1, KC_2, KC_3, KC_4, KC_5
 #define MADROWQWERT  KC_Q, KC_W, KC_E, KC_R, KC_T
@@ -13,10 +25,10 @@
 #define MADROWHJKL   KC_H, KC_J, KC_K, KC_L
 #define MADROWNM     KC_N, KC_M
 
-#define MADROWSEMICOL KC_SCLN
+#define MADROWSEMICOL LT(MADNAVLAYER, KC_SCLN)
 #define MADROWCOMDOT  KC_COMM,  KC_DOT
 /* full split */
-#define MADROWHJKLSQ MADROWHJKL, MADROWSEMICOL, KC_QUOT
+#define MADROWHJKLSQ MADROWHJKL, MADROWSEMICOL, LCTL_T(KC_QUOT)
 #define MADROWNMCDS  MADROWNM, MADROWCOMDOT, LT(MADNAVLAYER, KC_SLASH)
 /* full rows */
 #define MADROWNUM     MADROW12345, MADROW67890
@@ -26,6 +38,19 @@
 
 /* lower layer */
 /* layer 3 in elora vial */
+
+/* Lower, F-keys and navigation, see "full rows"
+ * --------------------------------------  -------------------------------------
+ *   |      |      |      |      |      |  |      |      |      |      |      |
+ * --+------+------+------+------+------+  +------+------+------+------+------+-
+ *   |  F9  |  F10 |  F11 |  F12 |      |  | PGUP | HOME |  UP  | END  |      |
+ * --+------+------+------+------+-------  -------+------+------+------+------+------|-
+ *   |  F5  |  F6  |  F7  |  F8  |      |  | PGDN | LEFT | DOWN | RGHT |      |      |
+ * --+------+------+------+------+------|  |------+------+------+------+------+------|-
+ *   |  F1  |  F2  |  F3  |  F4  |      |  |  BRK |      |      |      |      |
+ * --+------+------+------+------+------+  +------+------+------+------+------+--
+ */
+
 /* F keys */
 #define MADROW12345LOW  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define MADROWQWERTLOW  KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX
@@ -51,6 +76,19 @@
 
 /* raise layer */
 /* layer 4 in elora vial */
+
+/* Lower, F-keys and navigation, see "full rows"
+ * --------------------------------------  -------------------------------------
+ *   |      |      |      |      |      |  |      |      |      |      |      |
+ * --+------+------+------+------+------+  +------+------+------+------+------+-
+ *   |  1   |   2  |   3  |   4  |   5  |  |  6   |  7   |  8   |  9   |   0  |
+ * --+------+------+------+------+-------  -------+------+------+------+------+------|-
+ *   |  !   |   @  |   #  |   $  |   %  |  |  ^   |  &   |  *   |  (   |   )  |  +   |
+ * --+------+------+------+------+------|  |------+------+------+------+------+------|-
+ *   |  \   |   :  |   ;  |   -  |   [  |  |  ]   |  _   |  ,   |  .   |   /  |
+ * --+------+------+------+------+------+  +------+------+------+------+------+--
+ */
+
 #define MADROW12345RAI  _______, _______, _______, _______, _______
 #define MADROWQWERTRAI  KC_1,    KC_2,    KC_3,    KC_4,    KC_5
 #define MADROWASDFGRAI  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
@@ -64,7 +102,7 @@
 #define MADROWSEMICOLRAI  S(KC_0)
 #define MADROWCOMDOTRAI   KC_COMM,  KC_DOT
 /* full split */
-#define MADROWHJKLSQRAI MADROWHJKLRAI, MADROWSEMICOLRAI, S(KC_QUOT)
+#define MADROWHJKLSQRAI MADROWHJKLRAI, MADROWSEMICOLRAI, S(KC_EQL)
 #define MADROWNMCDSRAI  MADROWNMRAI, MADROWCOMDOTRAI, KC_SLASH
 /* full rows */
 #define MADROWNUMRAI     MADROW12345RAI, MADROW67890RAI
@@ -75,8 +113,10 @@
 /* other special keys commonly used, but not everywhere in "row" */
 #define MADCTL           LCTL_T(KC_ESC)
 #define MADRSFT          RSFT_T(KC_SLSH)
+#define MADENTRSFT          RSFT_T(KC_ENTER)
 
 #define MADTABRAI        KC_GRV
 #define MADCAPSRAI       S(KC_GRV)
-#define MADLSFTRAI       S(KC_BSLS) /* that pipe | */
+#define MADLSFTRAI       S(KC_BSLS) /* that's pipe | */
+#define MADRSFTRAI       S(KC_SLSH)
 
