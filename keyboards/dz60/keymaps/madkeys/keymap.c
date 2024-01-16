@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,         MADROWQ,                                                                                                             KC_LBRC, KC_RBRC, KC_BSLS,
         MADCTL,         MADROWA,                                                                                                                               KC_ENT,
         KC_LSFT,        MADROWZ,                                                                                                             KC_RSFT, KC_UP,   KC_RSFT,
-        KC_LCTL, KC_LGUI, KC_LALT,                   LT(_MADLOWER, KC_SPC),  KC_SPC,  LT(_MADRAISE, KC_SPC),               MADRALT, KC_LCTL, KC_LEFT, KC_DOWN, KC_RIGHT
+        KC_LCTL, KC_LGUI, MADLALTENT,             LT(_MADLOWER, KC_SPC),  KC_SPC,  LT(_MADRAISE, KC_SPC),               MADRALTENT, KC_LCTL, KC_LEFT, KC_DOWN, KC_RIGHT
     ),
 
     [_MADLOWER] = LAYOUT_wrapper(
