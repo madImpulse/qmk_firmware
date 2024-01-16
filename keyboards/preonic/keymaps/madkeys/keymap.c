@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  MADROWQ,               KC_DEL,
   LCTL_T(KC_ESC),  MADROWA,
   KC_LSFT, MADROWZ,               MADENTRSFT,
-  KC_LCTL, KC_LGUI, KC_LALT, LALT_T(KC_ENTER), LOWER,   KC_SPC,  KC_SPC,  RAISE,  RALT_T(KC_ENTER), KC_RCTL, KC_LEFT, KC_RGHT
+  KC_LCTL, KC_LGUI, KC_LALT, MADLALT, LOWER,   KC_SPC,  KC_SPC,  RAISE,  MADRALT, KC_RCTL, KC_LEFT, KC_RGHT
 ),
 
 
@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TILD, MADROWQLOW,           KC_DEL,
   KC_DEL,  MADROWALOW,
   _______, MADROWZLOW,           KC_PSCR,
-  _______, _______, _______, BACKLIT, _______, _______, _______, _______, _______, _______, _______, _______
+  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 ),
 
 /* Raise
@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, QK_BOOT, DB_TOGG,   _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL,
   QK_BOOTLOADER, _______, MU_NEXT,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  _______, _______, _______, _______,
   _______, AU_PREV, AU_NEXT,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______, _______, _______, _______, _______,
-  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+  _______, _______, _______, BACKLIT, _______, _______, _______, _______, _______, _______, _______, _______
 )
 
 
