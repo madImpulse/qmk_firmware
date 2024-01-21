@@ -117,7 +117,7 @@
 
 #define MADTABRAI        KC_GRV
 #define MADCAPSRAI       S(KC_GRV)
-#define MADLSFTRAI       S(KC_BSLS) /* that's pipe | */
-#define MADRSFTRAI       S(KC_SLSH)
+#define MADLSFTRAI       KC_PIPE
+#define MADRSFTRAI       KC_QUES
 #define MADRALTENT       RALT_T(KC_ENTER)
 #define MADLALTENT       LALT_T(KC_ENTER)
