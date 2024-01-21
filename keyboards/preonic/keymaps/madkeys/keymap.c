@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  MADROWQ,               KC_DEL,
   MADCTL,  MADROWA,
   KC_LSFT, MADROWZ,               MADENTRSFT,
-  KC_LCTL, KC_LGUI, KC_LALT, MADLALTENT, LOWER,   KC_SPC,  KC_SPC,  RAISE,  MADRALTENT, KC_RCTL, KC_LEFT, KC_RGHT
+  KC_LCTL, KC_LGUI, KC_LALT, KC_RSFT, LOWER,   KC_SPC,  KC_SPC,  RAISE,  MADRALTENT, KC_RCTL, KC_LEFT, KC_RGHT
 ),
 
 
@@ -74,9 +74,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------]'
  */
 [_LOWER] = LAYOUT_preonic_grid_wrapper(
-  KC_TILD, MADROWNUMLOW,         KC_BSPC,
-  KC_TILD, MADROWQLOW,           KC_DEL,
-  KC_DEL,  MADROWALOW,
+  _______, MADROWNUMLOW,         KC_BSPC,
+  _______, MADROWQLOW,           KC_DEL,
+  _______, MADROWALOW,
   _______, MADROWZLOW,           KC_PSCR,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 ),

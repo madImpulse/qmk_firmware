@@ -46,3 +46,6 @@
 
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
+
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+#define PERMISSIVE_HOLD
