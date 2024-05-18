@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_RAISE] = LAYOUT_promenade_grid_wrapper(
         _______,  MADROW12345RAI,                                  KC_MINS, KC_EQL,  MADROW67890RAI,                                   _______,
         MADTABRAI,  MADROWQWERTRAI,                                  KC_LBRC, KC_RBRC, MADROWYUIOPRAI,                                   _______,
-        MADCAPSRAI,  MADROWASDFGRAI,                                                    MADROWHJKLRAI, MADROWSEMICOLRAI,                  _______,
+        MADCAPSRAI,  MADROWASDFGRAI,                                                    MADROWHJKLRAI, MADROWSEMICOLRAI,                  KC_ENT,
         MADLSFTRAI,  MADROWZXCVBRAI,                                  KC_END,  KC_PGDN, MADROWNMCDSRAI,                                   _______,
         _______,  _______, _______, MO(_ADJUST), _______,  MO(_ADJUST),      _______,      _______,  _______, _______, _______,   _______, _______
     ),
