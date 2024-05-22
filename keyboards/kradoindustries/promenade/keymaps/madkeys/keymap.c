@@ -28,7 +28,6 @@ enum layer_names {
 #define MADNAVLAYER _LOWER
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
     /* Base Layer
      * .-----------------------------------------------------------------------------------------------------------------------------.
      * | ESC    | 1      | 2      | 3      | 4      | 5      | -      | =      | 6      | 7      | 8      | 9      | 0      | BACKSP |
@@ -43,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * '-----------------------------------------------------------------------------------------------------------------------------'
      */
     [_BASE] = LAYOUT_promenade_grid_wrapper(
-        KC_ESC,  MADROW12345,                                      KC_MINS, KC_EQL,  MADROW67890,                                      KC_BSPC,
+        KC_GRV,  MADROW12345,                                      KC_MINS, KC_EQL,  MADROW67890,                                      KC_BSPC,
         KC_TAB,  MADROWQWERT,                                      KC_LBRC, KC_RBRC, MADROWYUIOP,                                      KC_DEL,
         MADCTL,  MADROWASDFG,                                                        MADROWHJKL, MADROWSEMICOL,                        LCTL_T(KC_QUOT),
         KC_LSFT, MADROWZXCVB,                                      KC_PGUP,  KC_PGDN, MADROWNMCDS,                                      KC_RSFT,
