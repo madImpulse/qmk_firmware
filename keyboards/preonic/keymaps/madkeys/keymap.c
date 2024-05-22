@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Esc  |   MADROWA                                                           |  '   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift|   MADROWZ                                                           |   "  |
+ * | Shift|   MADROWZ                                                           | Shift|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl | GUI  | Alt  |ENT/ALT|Lower |    Space   |Raise |ENT/ALT| Ctrl| Left |Right |
  * `-----------------------------------------------------------------------------------'
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  MADROWQ,               KC_DEL,
   MADCTL,  MADROWA,
   KC_LSFT, MADROWZ,               KC_RSFT,
-  KC_LCTL, MO(_ADJUST), KC_LGUI, MADLALTENT, LT(LOWER, KC_SPC),  KC_SPC,  LT(RAISE, KC_SPC),   MADRALTENT, KC_LEFT, KC_RGHT, KC_UP, KC_DOWN
+  KC_LCTL, MO(_ADJUST), KC_LGUI, MADLALTENT, LT(_LOWER, KC_SPC),  KC_SPC,  LT(_RAISE, KC_SPC),   MADRALTENT, KC_LEFT, KC_RGHT, KC_UP, KC_DOWN
 ),
 
 
@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, MADROWQLOW,           KC_DEL,
   _______, MADROWALOW,
   _______, MADROWZLOW,           KC_PSCR,
-  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+  _______, _______, _______, _______, _______, _______, MO(_ADJUST), _______, _______, _______, _______, _______
 ),
 
 /* Raise
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   MADTABRAI,  MADROWQRAI,          KC_EQL,
   MADCAPSRAI, MADROWARAI,
   MADLSFTRAI, MADROWZRAI,          MADRSFTRAI,
-  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+  _______, _______, _______, _______, MO(_ADJUST), _______, _______, _______, _______, _______, _______, _______
 ),
 
 /* Adjust (Lower + Raise)
