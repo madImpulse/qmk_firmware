@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MADTABRAI,  MADROWQWERTRAI,                                  KC_LPRN, KC_RPRN, MADROWYUIOPRAI,                                   _______,
         MADCAPSRAI,  MADROWASDFGRAI,                                                    MADROWHJKLRAI, MADROWSEMICOLRAI,                  KC_ENT,
         MADLSFTRAI,  MADROWZXCVBRAI,                                  KC_HOME,  KC_END, MADROWNMCDSRAI,                                   _______,
-        _______,  _______, _______, _______, _______,  MO(_ADJUST),      _______,      _______,  _______, _______, _______,   _______, _______
+        _______,  _______, _______, _______, MO(_ADJUST), _______,       _______,      _______,  _______, _______, _______,   _______, _______
     ),
 
     [_ADJUST] = LAYOUT_all(
