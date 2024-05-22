@@ -126,57 +126,57 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-        case QWERTY:
-          if (record->event.pressed) {
-            set_single_persistent_default_layer(_QWERTY);
-          }
-          return false;
-          break;
-        case LOWER:
-          if (record->event.pressed) {
-            layer_on(_LOWER);
-            update_tri_layer(_LOWER, _RAISE, _ADJUST);
-          } else {
-            layer_off(_LOWER);
-            update_tri_layer(_LOWER, _RAISE, _ADJUST);
-          }
-          return false;
-          break;
-        case RAISE:
-          if (record->event.pressed) {
-            layer_on(_RAISE);
-            update_tri_layer(_LOWER, _RAISE, _ADJUST);
-          } else {
-            layer_off(_RAISE);
-            update_tri_layer(_LOWER, _RAISE, _ADJUST);
-          }
-          return false;
-          break;
-        case BACKLIT:
-          if (record->event.pressed) {
-            register_code(KC_RSFT);
-            #ifdef BACKLIGHT_ENABLE
-              backlight_step();
-            #endif
-            #ifdef RGBLIGHT_ENABLE
-              rgblight_step();
-            #endif
-            #ifdef __AVR__
-            writePinLow(E6);
-            #endif
-          } else {
-            unregister_code(KC_RSFT);
-            #ifdef __AVR__
-            writePinHigh(E6);
-            #endif
-          }
-          return false;
-          break;
-      }
-    return true;
-};
+// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//   switch (keycode) {
+//         case QWERTY:
+//           if (record->event.pressed) {
+//             set_single_persistent_default_layer(_QWERTY);
+//           }
+//           return false;
+//           break;
+//         case LOWER:
+//           if (record->event.pressed) {
+//             layer_on(_LOWER);
+//             update_tri_layer(_LOWER, _RAISE, _ADJUST);
+//           } else {
+//             layer_off(_LOWER);
+//             update_tri_layer(_LOWER, _RAISE, _ADJUST);
+//           }
+//           return false;
+//           break;
+//         case RAISE:
+//           if (record->event.pressed) {
+//             layer_on(_RAISE);
+//             update_tri_layer(_LOWER, _RAISE, _ADJUST);
+//           } else {
+//             layer_off(_RAISE);
+//             update_tri_layer(_LOWER, _RAISE, _ADJUST);
+//           }
+//           return false;
+//           break;
+//         case BACKLIT:
+//           if (record->event.pressed) {
+//             register_code(KC_RSFT);
+//             #ifdef BACKLIGHT_ENABLE
+//               backlight_step();
+//             #endif
+//             #ifdef RGBLIGHT_ENABLE
+//               rgblight_step();
+//             #endif
+//             #ifdef __AVR__
+//             writePinLow(E6);
+//             #endif
+//           } else {
+//             unregister_code(KC_RSFT);
+//             #ifdef __AVR__
+//             writePinHigh(E6);
+//             #endif
+//           }
+//           return false;
+//           break;
+//       }
+//     return true;
+// };
 
 bool muse_mode = false;
 uint8_t last_muse_note = 0;
