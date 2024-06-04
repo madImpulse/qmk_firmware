@@ -34,11 +34,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+-----------------|
      * | TAB    | Q      | W      | E      | R      | T      | [      | ]      | Y      | U      | I      | O      | P      | DEL    |
      * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+-----------------+--------|
-     * | LCTRL  | A      | S      | D      | F      | G      |        |        | H      | J      | K      | L      | ;      | ENTER  |
+     * | LCTRL  | A      | S      | D      | F      | G      |        |        | H      | J      | K      | L      | ;      | CTL '  |
      * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------------------------+--------|
      * | LSHIFT | Z      | X      | C      | V      | B      | PG UP  | PG DN  | N      | M      | ,      | .      | /      | RSHIFT |
      * |--------+--------+--------+--------+--------+-----------------+--------+--------+--------+-----------------+--------+--------|
-     * | LCTRL  | LGUI   | FN     | LALT   | SPACE  | SPACE  | SPACE  | SPACE  | SPACE  | LEFT   | DOWN   | UP     | RIGHT  | RCTRL  |
+     * | LCTRL  | LGUI   | FN     | LALT   | SPACE  | SPACE  | SPACE  | SPACE  | SPACE  | ENTER  | LEFT   | DOWN   | UP     | RIGHT  |
      * '-----------------------------------------------------------------------------------------------------------------------------'
      */
     [_BASE] = LAYOUT_promenade_grid_wrapper(
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  MADROWQWERT,                                      KC_LBRC, KC_RBRC, MADROWYUIOP,                                      KC_DEL,
         MADCTL,  MADROWASDFG,                                                        MADROWHJKL, MADROWSEMICOL,                        LCTL_T(KC_QUOT),
         KC_LSFT, MADROWZXCVB,                                      KC_PGUP,  KC_PGDN, MADROWNMCDS,                                      KC_RSFT,
-        KC_LCTL, MO(_ADJUST), KC_LGUI, MADLALTENT, LT(_LOWER, KC_SPC), KC_SPC,  KC_SPC,  LT(_RAISE, KC_SPC),  MADRALTENT, KC_LEFT, KC_RGHT, KC_UP, KC_DOWN
+        KC_LCTL, MO(_ADJUST), KC_LGUI, MADLALTENT, LT(_LOWER, KC_SPC), KC_SPC,  KC_SPC,  LT(_RAISE, KC_SPC),  MADRALTENT, KC_LEFT, KC_UP, KC_DOWN, KC_RGHT
     ),
 
     [_LOWER] = LAYOUT_promenade_grid_wrapper(
