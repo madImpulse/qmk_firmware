@@ -24,7 +24,7 @@
         "pin": "B7"
     },
     "rgblight": {
-        "led_count": 14,
+        "led_count": 6,
         "sleep": true,
         "animations": {
             "alternating": true,
