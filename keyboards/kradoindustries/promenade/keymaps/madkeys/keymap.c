@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,  MADROWQWERT,                                      KC_LBRC, KC_RBRC, MADROWYUIOP,                                      KC_DEL,
         MADCTL,  MADROWASDFG,                                                        MADROWHJKL, MADROWSEMICOL,                        LCTL_T(KC_QUOT),
         KC_LSFT, MADROWZXCVB,                                      KC_PGUP,  KC_PGDN, MADROWNMCDS,                                      KC_RSFT,
-        KC_LCTL, MO(_ADJUST), KC_LGUI, MADLALTENT, LT(_LOWER, KC_SPC), KC_SPC,  KC_SPC,  LT(_RAISE, KC_SPC),  MADRALTENT, KC_LEFT, KC_UP, KC_DOWN, KC_RGHT
+        KC_LCTL, MO(_ADJUST), KC_LGUI, MADLALTENT, LT(_LOWER, KC_SPC), KC_SPC,  KC_SPC,  LT(_RAISE, KC_SPC),  MADRALTENT, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
     ),
 
     [_LOWER] = LAYOUT_promenade_grid_wrapper(
@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_ADJUST] = LAYOUT_all(
         KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,
         _______, KC_HOME, KC_UP,   KC_END,  KC_PGUP, _______, KC_MPLY, KC_MSTP, RGB_TOG, RGB_MOD, RGB_SPD, RGB_SPI, KC_PSCR, _______,
-        QK_BOOT, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, _______,                   RGB_HUI, RGB_SAI, RGB_VAI, _______, _______, QK_BOOT,
+        QK_BOOT, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, _______,                   RGB_HUI, RGB_SAI, RGB_VAI, RGB_M_P, RGB_Mx_G, QK_BOOT,
         _______, _______, _______, _______, _______, _______, KC_MPRV, KC_MNXT, _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_BSLS, _______,
         _______, _______, _______, _______, _______, _______,     _______,      _______, _______, _______, _______, _______, QK_BOOT
     )

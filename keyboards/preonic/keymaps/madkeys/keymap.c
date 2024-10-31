@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shift|   MADROWZ                                                           | Shift|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl | Adj  | GUI  |ENT/ALT|Lower |Space/Raise |ENT/ALT|Left |  Up  | Down | Right|
+ * | Ctrl | Adj  | GUI  |ENT/ALT|Lower |Space/Raise |ENT/ALT|Left | Down |  Up  | Right|
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_preonic_grid_wrapper(
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  MADROWQ,               KC_DEL,
   MADCTL,  MADROWA,
   KC_LSFT, MADROWZ,               KC_RSFT,
-  KC_LCTL, MO(_ADJUST), KC_LGUI, MADLALTENT, LT(_LOWER, KC_SPC),  KC_SPC,  LT(_RAISE, KC_SPC),   MADRALTENT, KC_LEFT, KC_UP, KC_DOWN, KC_RGHT
+  KC_LCTL, MO(_ADJUST), KC_LGUI, MADLALTENT, LT(_LOWER, KC_SPC),  KC_SPC,  LT(_RAISE, KC_SPC),   MADRALTENT, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
 ),
 
 
