@@ -53,9 +53,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,             KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_DEL,   KC_PGUP,
         KC_GRV,   MADROWNUM,                                                                                          KC_MINS,  KC_EQL,   KC_BSPC,            KC_PGDN,
         KC_TAB,   MADROWQ,                                                                                            KC_LBRC,  KC_RBRC,  KC_BSLS,            KC_HOME,
-        MADCTL,   MADROWA,                                                                                                                KC_ENT,             KC_END,
+        MADCTL,   MADROWA,                                                                                                                RCTL_T(KC_ENTER),   KC_END,
         KC_LSFT,  MADROWZ,                                                                                                                KC_RSFT,  KC_UP,
-        KC_LCTL,  KC_LWIN,  LT(MAD_LOWER, KC_LALT),                            LT(MAD_RAISE, KC_SPC),                 MO(MAD_RAISE), MADRALTENT, KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LWIN,  LT(MAD_LOWER, KC_LALT),                            LT(MAD_RAISE, KC_SPC),               MADRALTENT, KC_RALT,  KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [MAD_LOWER] = LAYOUT_wrapper(
         _______,           _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,   MADROWQLOW,                                                                                       _______,  _______,  _______,            _______,
         _______,   MADROWALOW,                                                                                                           _______,            _______,
         _______,   MADROWZLOW,                                                                                                           _______,  _______,
-        _______,   _______,  _______,                                _______,                              MO(MAD_FN),  _______,  _______,  _______,  _______,  _______),
+        _______,   _______,  MO(MAD_FN),                          _______,                              MO(MAD_FN),  _______,  _______,  _______,  _______,  _______),
 
     [MAD_RAISE] = LAYOUT_wrapper(
         _______,           _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_SYSTEM_POWER,
@@ -71,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MADTABRAI,    MADROWQRAI,                                                                                       _______,  _______,  _______,            _______,
         MADCAPSRAI,   MADROWARAI,                                                                                                           _______,            _______,
         MADLSFTRAI,   MADROWZRAI,                                                                                                           _______,  _______,
-        _______,         _______,  _______,                                _______,                        _______,  MO(MAD_FN),  _______,  _______,  _______,  _______),
+        _______,         _______,  _______,                                _______,                        MO(MAD_FN),  _______,  _______,  _______,  _______,  _______),
 
     [MAD_FN] = LAYOUT_ansi_82(
         _______,            KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  QK_BOOTLOADER,  _______,
